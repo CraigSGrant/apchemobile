@@ -89,7 +89,7 @@ textarea {
 /*MAIN*/
 
 body {
-    background-color: #f5f9fa;
+    background-color: #f4f4f4f4;
 }
 
 a {
@@ -119,7 +119,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: 4px solid #1EAEDB;
+    border-bottom: 4px solid #9099A2;
     z-index: 100;
 
 }
@@ -172,7 +172,7 @@ li {
 
 .current {
 
-    color: #2262AD;
+    color: #C0B283;
 
 }
 
@@ -181,7 +181,7 @@ li {
 }
 
 p, h4 {
-    color: #4C516D;
+    color: #373737;
 }
 
 section {
@@ -195,8 +195,10 @@ section {
 
 h1 {
 
-    color: #2262AD;
+    color: #6D7993;
     margin: 1500px 0px 100px 0px ;
+    text-decoration: underline #C0B283;;
+
 
 }
 
