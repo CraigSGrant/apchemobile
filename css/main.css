@@ -215,7 +215,7 @@ p {
 }
 
 /*MEDIA QUERY*/
-@media only screen and (max-width : 640px) {
+@media only screen and (max-width : 685px) {
 
     nav {
         margin-top: 8px;
@@ -239,7 +239,8 @@ p {
     li {
         padding: 8px;
         float: left;
-        margin-bottom: 0px;
+        margin-bottom: 1rem; 
+
     }
 
     #About, #Questions, #Resume, #CoverLetter{
