@@ -43,6 +43,9 @@
         <body class="container">
             <aside class="about row">
                 <h1 id="About" class="space"></h1>
+                <aside class="photo">
+                    <image id="me"></image>
+                </aside>
                 <h3>My name is <a id="Craig">Craig Grant</a>. I love the church, I care about people, and I would be ecstatic to work with the team building products at Planning Center.</h3>
                 <p class="twelve columns"><a href='tel:+1-831-247-8146'>831.247.8246</a>  //  <a href='mailto:craigstephengrant@gmail.com'>craigstephengrant@gmail.com</a>  //  <a href='https://www.instagram.com/craig_stephen/'>@craig_stephen</a></p>
             </aside>
@@ -54,27 +57,24 @@
             <aside class="row">
                 <h1 id="Resume">Resumé</h1>
                 <p>MARKETING PROJECT MANAGER<br> SURF TECHNICIANS LLC | SAN DIEGO, CA | 2017-PRESENT<br>
-                • Beginning as a customer service rep. I was able to effectively serve our customers and our sales representatives while managing resources to rebrand the company for the first time in over 30 years. The end result was a complete website redesign and my position being updated as the only marketing team member for our company in 5 years.<br>
-                
+                • Beginning as a customer service rep. I was able to effectively serve our customers and our sales representatives while managing resources to rebrand the company for the first time in over 30 years. The end result was a complete website redesign and my position being updated as the only marketing team member for our company in 5 years.</p>
                 <br>
-                BUSINESS ANALYST/PRODUCT MANAGER<br> OLIVERMCMILLAN | SAN DIEGO, CA | 2015-2016<br>
-                • I got to build, implement, and administrate software and related procedures that allowed OliverMcMillan to define and systematize it's business process. My responsibilites varied from leading a development team in a ground up build of multiple apps to end user training and understanding of pain points.<br>
+                <p>BUSINESS ANALYST/PRODUCT MANAGER<br> OLIVERMCMILLAN | SAN DIEGO, CA | 2015-2016<br>
+                • I got to build, implement, and administrate software and related procedures that allowed OliverMcMillan to define and systematize it's business process. My responsibilites varied from leading a development team in a ground up build of multiple apps to end user training and understanding of pain points.</p>
                 <br>
-                FRONT END DEVELOPER<br> WHAT.IT.IS CREATIVE | AUSTIN, TX | 2015<br>
-                • Primarily Wordpress based builds on a small team of 2 designers, myself, and one other developer. We were able to work closely with clients helping them navigate user concerns and business needs ranging from an app for childrens stories/podcasts to a multi-national contsrtuction portfolio.<br>
-                </p>
-
+                <p>FRONT END DEVELOPER<br> WHAT.IT.IS CREATIVE | AUSTIN, TX | 2015<br>
+                • Primarily Wordpress based builds on a small team of 2 designers, myself, and one other developer. We were able to work closely with clients helping them navigate user concerns and business needs ranging from an app for childrens stories/podcasts to a multi-national contsrtuction portfolio.</p>
+                <br>
                 <p>PROJECT MANAGER<br> STORYVILLE COFFEE | SEATTLE, WA | 2013-2014<br>
-                • My function here was broad. With the function of the title of project manager being for both web development and construction, I was tasked with the continued perfection of aesthetic of the brand while building out and maintaining current store fronts. I built a web store and lead all levels of training staff for deployment. It was truly a "wear all the hats" job and I loved it! <br></p>
-
+                • My function here was broad. With the function of the title of project manager being for both web development and construction, I was tasked with the continued perfection of aesthetic of the brand while building out and maintaining current store fronts. I built a web store and lead all levels of training staff for deployment. It was truly a "wear all the hats" job and I loved it!</p>
+                <br>
                 <p>PROJECT MANAGER<br> THE RESURGENCE | SEATTLE, WA | 2011-2012<br>
-                • This was the last job I held as a part of a church. It opened my eyes to a new level of frustrations that are a part of "modern" ministry. I saw friends and colleagues work tirelessly with little notice or reprieve and I experienced first hand the way that affected the health of the church and its families. That became a driving force to seek changes that would positively influence the lives of everyone in ministry.<br></p>
-
+                • This was the last job I held as a part of a church. It opened my eyes to a new level of frustrations that are a part of "modern" ministry. I saw friends and colleagues work tirelessly with little notice or reprieve and I experienced first hand the way that affected the health of the church and its families. That became a driving force to seek changes that would positively influence the lives of everyone in ministry.</p>
+                <br>
                 <p>BOATSWAINS MATE/PROJECT MANAGER<br> USCG | SEATTLE, WA | 2009-2011<br>
                 • As the department lead I was responsible for directing and training all newly deployed recruits as well as encouraging them towards specified training that best suited their strengths. I was young and they were younger, and for the first time I realized I cared more about how people were trained and developed than the end result.</p>
-
-
-                <h4><span>EDUCATION:</h4>
+                <br>
+                <h4>EDUCATION:</h4>
                 <p>CODE FELLOWS | SEATTLE, WA | 2014 | FRONT-END USER EXPERIENCE<br>
                 NORTH SEATTLE | SEATTLE, WA | 2013 | BUSINESS<br>
                 COAST GUARD INSTITUTE | SEATTLE, WA | 2011 | PROJECT MANAGEMENT</p>
@@ -97,7 +97,29 @@
             <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
             <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
             <script src="js/plugins.js"></script>
-            <script src="js/main.js"></script>
+            
+            <!-- scroll to button -->
+            <script>
+                function ScrollTo(name) {
+                //init thread
+                ScrollToResolver(document.getElementById(name));
+                }
+
+                function ScrollToResolver(elem) {
+                var jump = parseInt(elem.getBoundingClientRect().top * .2);
+                document.body.scrollTop += jump;
+                document.documentElement.scrollTop += jump;
+                //lastjump detects anchor unreachable, also manual scrolling to cancel animation if scroll > jump
+                if (!elem.lastjump || elem.lastjump > Math.abs(jump)) {
+                elem.lastjump = Math.abs(jump);
+                setTimeout(function() {
+                ScrollToResolver(elem);
+                  }, "100");
+                } else {
+                elem.lastjump = null;
+                    }
+                }   
+            </script>
 
             <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
             <script>
