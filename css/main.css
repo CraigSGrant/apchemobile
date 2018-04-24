@@ -167,6 +167,71 @@ nav {
     background: #fff url(../img/me.jpg) center;
 }
 
+.answerimage {
+    background-repeat: no-repeat;        
+    position: relative;        
+    width: auto;            
+    height: 620px;       
+    margin-left: auto;      
+    margin-right: auto;
+    object-fit: scale-down;
+}
+
+
+#five{
+
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #fff url(../img/begin.png) center;
+    background-repeat: no-repeat;
+}
+
+#six{
+
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #fff url(../img/end.png) center;
+    background-repeat: none;
+    background-repeat: no-repeat;
+}
+
+.videowrapper {
+
+    float: none;
+    clear: both;
+    width: 700px;<-- Added-->
+    height: 700px;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    margin: 0 auto;<-- Added-->
+    max-width: 100%;<-- Added-->
+}
+
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+    max-height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 button, a:hover#menu-icon {
 
     background-color: #444;
