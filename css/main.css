@@ -316,13 +316,13 @@ nav {
 .videowrapper {
     float: none;
     clear: both;
-    width: 700px;<-- Added-->
+    width: 700px;
     height: 700px;
     position: relative;
     padding-bottom: 46.25%;
     padding-top: 25px;
-    margin: 0 auto;<-- Added-->
-    max-width: 100%;<-- Added-->
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .videowrapper iframe {
@@ -513,6 +513,18 @@ p {
     .space {
         padding-top: 200px;
     }
+
+    .videowrapper {
+    float: none;
+    clear: both;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    padding-bottom: 46.25%;
+    padding-top: 25px;
+    margin: 0 auto;
+    max-width: 100%;
+}
 }
 
 
