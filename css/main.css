@@ -103,13 +103,15 @@ a :hover {
     color: #2262AD;
 }
 
-
-
 img {
-
-    width: 100%;
-
+    height: 100px;
+    width: 100px;
 }
+
+img a {
+    box-shadow: inset 0 0 0 1000px rgba(255,0,0);
+}
+
 
 header {
 
@@ -174,22 +176,31 @@ nav {
     height: 620px;       
     margin-left: auto;      
     margin-right: auto;
-    object-fit: scale-down;
 }
 
 
-#five{
+#overlay :hover {
+    max-width:100%;
+    background: url(../img/mag.svg) center; 
+    opacity: .3;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,220,) center;
+    background-repeat: no-repeat;
+}
+
+
+#one{
 
     height: 100%;
     width: 100%;
     overflow: hidden;
     background: #fff url(../img/begin.png) center;
     background-repeat: no-repeat;
+
 }
 
-#six{
+#two{
 
-    height: 100%;
+    height: 80%;
     width: 100%;
     overflow: hidden;
     background: #fff url(../img/end.png) center;
@@ -197,14 +208,118 @@ nav {
     background-repeat: no-repeat;
 }
 
-.videowrapper {
+#six {
+    height: 782px;
+    width: 800px;
+    overflow: hidden;
+    background: #000000 url(../img/meeting.png) center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    left: 15%;
+    top: 8%;
+    margin-top: 20px;
+    margin-bottom: -345px;
+}
 
+#four {
+    height: 518px;
+    width: 800px;
+    overflow: hidden;
+    background: #000000 url(../img/mds.png) center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    left: 15%;
+    top: 8%;
+    margin-top: 20px;
+    margin-bottom: -242px;
+}
+
+#five {
+    height: 545px;
+    width: 800px;
+    overflow: hidden;
+    background: #000000 url(../img/begin.png) center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    left: 15%;
+    top: 8%;
+    margin-top: 20px;
+    margin-bottom: -260px;
+}
+
+#seven {
+    height: 783px;
+    width: 800px;
+    overflow: hidden;
+    background: #000000 url(../img/specs.png) center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    left: 15%;
+    top: 8%;
+    margin-top: 20px;
+    margin-bottom: -350px;
+}
+
+#three {
+    height: 718px;
+    width: 800px;
+    overflow: hidden;
+    background: #000000 url(../img/whiteboard.jpg) center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    left: 15%;
+    top: 8%;
+    margin-top: 20px;
+    margin-bottom: -324px;
+}
+
+#eight {
+    height: 418px;
+    width: 800px;
+    overflow: hidden;
+    background: #000000 url(../img/invoices.png) center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    left: 15%;
+    top: 8%;
+    margin-top: 20px;
+    margin-left: -15px;
+    margin-bottom: -200px;
+}
+
+#nine {
+    height: 3567px;
+    width: 800px;
+    overflow: hidden;
+    background: #000000 url(../img/zendesk.png) center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    left: 15%;
+    top: 8%;
+    margin-top: 20px;
+    margin-bottom: -1800px;
+}
+
+
+.thumbnail {
+    width: calc(100% * 0.50);
+    height: calc(100% * 0.50);
+    -ms-zoom: 0.5;
+    -moz-transform: scale(0.5);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.5);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+}
+
+.videowrapper {
     float: none;
     clear: both;
     width: 700px;<-- Added-->
     height: 700px;
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 46.25%;
     padding-top: 25px;
     margin: 0 auto;<-- Added-->
     max-width: 100%;<-- Added-->
@@ -223,13 +338,57 @@ nav {
 
 
 
-
-
-
-
-
-
-
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    overflow-y: auto;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 80%;
+    height: 805px;
+    position: relative;
+    display: block;
+    margin: 5% auto;
+    padding: 5px 20px 13px 20px;
+    overflow-y: initial !important;
+    hover: none;
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 81px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
 
 
 button, a:hover#menu-icon {
@@ -292,6 +451,11 @@ p {
 
 }
 
+.smallnote {
+    
+    font-size: .8em;
+}
+
 .about {
     text-align: center;
 }
@@ -337,46 +501,7 @@ p {
         font-size: 1.1em;
     }
 
-   /* header {
 
-        position: absolute;
-
-    }
-
-    #menu-icon {
-
-        display:inline-block;
-
-    }
-
-    nav ul, nav:active ul { 
-
-        display: none;
-        position: absolute;
-        padding: 20px;
-        background: #fff;
-        border: 5px solid #444;
-        right: 20px;
-        top: 60px;
-        width: 50%;
-        border-radius: 4px 0 4px 4px;
-
-    }
-
-    nav li {
-
-        text-align: center;
-        width: 100%;
-        padding: 10px 0;
-        margin: 0;
-
-    }
-
-    nav:hover ul {
-
-        display: block;
-
-    }*/
 }
 /* ==========================================================================
    Body styles
